@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "林晨西",
+      "type": "温柔学长",
+      "avatarPath": "Characters/Boy_01",
+      "personality": "温柔"
+    },
+    {
+      "id": 2,
+      "name": "顾云深",
+      "type": "高冷总裁",
+      "avatarPath": "Characters/Boy_02",
+      "personality": "高冷"
+    },
+    {
+      "id": 3,
+      "name": "夏星河",
+      "type": "阳光学弟",
+      "avatarPath": "Characters/Boy_03",
+      "personality": "阳光"
+    }
+  ]
+}
