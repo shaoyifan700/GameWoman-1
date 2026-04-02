@@ -23,6 +23,8 @@ public class HomePageManager : MonoBehaviour
 
     public void OnClickQuit()
     {
+        UnityEditor.EditorApplication.isPlaying = false;
+
         Application.Quit();
     }
 }
