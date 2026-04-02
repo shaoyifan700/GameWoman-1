@@ -73,7 +73,7 @@
       "id": 1008,
       "characterId": 1,
       "characterName": "林晨西",
-      "text": "第一天嘛，都会这样的。我刚来的时候连食堂都找不到，饿了一个上午。（他笑着摇摇头）",
+      "text": "第一天，都会这样的。我刚来的时候连食堂都找不到，饿了一个上午。（他笑着摇摇头）",
       "backgroundPath": "Backgrounds/School",
       "choices": [
         {"choiceId": 1, "text": "哈哈，学长你也会这样啊！（笑出来）", "nextDialogueId": 1009, "favorabilityChanges": [{"characterId": 1, "change": 4}]},
@@ -514,6 +514,1226 @@
       "backgroundPath": "Backgrounds/Festival",
       "choices": [
         {"choiceId": 1, "text": "完成", "nextDialogueId": -1, "favorabilityChanges": []}
+      ]
+    },
+    {
+      "id": 2001,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "学校今天来了一位特殊的嘉宾。走廊的公告栏上贴着大红色的海报——顾氏科技CEO顾云深将来到校园，进行年度校企合作演讲。这个名字，最近在财经新闻上频繁出现。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2002,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2002,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "报告厅里座无虚席。同学们交头接耳，有人说他28岁就把公司做到上市，有人说他私生活复杂，对象换了一个又一个。你坐在靠后的位置，随手翻着手上的资料。",
+      "backgroundPath": "Backgrounds/Auditorium",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2003,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2003,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "灯光暗下来，舞台上走出一个男人。西装笔挺，神情冷淡，像是对台下几百双眼睛完全免疫。他扫视了一圈全场，目光掠过你所在的方向时，你莫名屏住了呼吸。",
+      "backgroundPath": "Backgrounds/Auditorium",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2004,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2004,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "我不擅长讲废话，所以今天只说三件事：顾氏科技要什么样的人，给什么样的待遇，以及你们大多数人为什么会被淘汰。",
+      "backgroundPath": "Backgrounds/Auditorium",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "（心里一紧，认真坐直）这人说话真直接。",
+          "nextDialogueId": 2005,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 0
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "（小声）这也太傲了吧……",
+          "nextDialogueId": 2005,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2005,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "顾氏不需要听话的人，也不需要聪明的人。我们只要一种人——能解决问题的人。其他的，都是资源浪费。",
+      "backgroundPath": "Backgrounds/Auditorium",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2006,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2006,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "演讲结束后，你被安排作为学生代表递交合作协议文件。走上台的时候，你发现顾云深正低头看手机，连抬头的兴趣都没有。",
+      "backgroundPath": "Backgrounds/Auditorium",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2007,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2007,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（头也不抬）放这里就行。",
+      "backgroundPath": "Backgrounds/Auditorium",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "这是学校诚意准备的合作文件，请您过目。（平静递过去）",
+          "nextDialogueId": 2008,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 5
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "（默默把文件放下，转身要走）",
+          "nextDialogueId": 2009,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2008,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（终于抬起头，扫了你一眼）……学生代表？（停顿）你刚才在台下，是唯一一个没有在录视频的人。",
+      "backgroundPath": "Backgrounds/Auditorium",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "录视频没什么用，听进去才有用。",
+          "nextDialogueId": 2010,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 8
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "手机没电了。（如实回答）",
+          "nextDialogueId": 2011,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2009,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（叫住你）等一下。（看了眼文件封面）你叫什么名字？",
+      "backgroundPath": "Backgrounds/Auditorium",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "告诉了他名字，反问：您看文件吗？",
+          "nextDialogueId": 2010,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2010,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（罕见地沉默了两秒，把文件拿了起来）……有意思。（翻开看了一眼）实习名额的事，让你们院长来谈。",
+      "backgroundPath": "Backgrounds/Auditorium",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2012,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2011,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（嘴角微动，像是要笑但没笑出来）诚实。（拿起文件）行了，你走吧。",
+      "backgroundPath": "Backgrounds/Auditorium",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2012,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2012,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "一个月后，校企合作实习名单公布。你的名字在列——顾氏科技，战略部。据说这个部门每年只接收两名实习生，而且全程由顾云深亲自管理。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2013,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2013,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "顾氏科技大厦，第38层。前台把你引到一间宽大的办公室门口，敲门进去，顾云深正坐在落地窗前，城市的全景在他身后展开。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2014,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2014,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（没有看你）迟到了三分钟。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "前台让我等了五分钟，所以实际上我早到了两分钟。",
+          "nextDialogueId": 2015,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 8
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "抱歉，路上堵车。",
+          "nextDialogueId": 2016,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2015,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（这才转过身看你，眼神里有一丝兴味）……记性不错。坐。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2017,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2016,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "我不接受借口。（把一份文件推过来）这是你第一周的任务，周五之前给我分析报告。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2017,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2017,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（把一份厚厚的行业报告推过来）竞品分析，三家公司，维度自己定。周五早上九点，我要看到完整报告。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "请问有什么参考方向吗？",
+          "nextDialogueId": 2018,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 2
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "好，我来做。（接过文件）",
+          "nextDialogueId": 2019,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2018,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "如果我给你方向，要你来做什么。（顿了顿）自己想。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "（咬牙）好。",
+          "nextDialogueId": 2020,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2019,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（看了你一眼）没有问题？",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "先做，有问题再说。",
+          "nextDialogueId": 2020,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 4
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "请问数据来源有限制吗？",
+          "nextDialogueId": 2020,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2020,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "接下来的三天，你几乎没有好好睡觉。数据、图表、行业趋势……你把所有能找到的资料都翻了个遍。周五早上八点五十，你出现在他办公室门口。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2021,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2021,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（翻看你的报告，沉默了很长时间）第三部分的逻辑有问题。你用的是去年的数据，但这个行业更新速度是按月算的。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "您说得对，我重新做。（掏出笔记本记）",
+          "nextDialogueId": 2022,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 5
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "最新数据还没有公开发布，这是目前能拿到的最新版本。",
+          "nextDialogueId": 2023,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2022,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "其他部分……（停顿）比我预期的好。（把报告合上）下周继续。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2024,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2023,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（停顿，重新翻开报告）……你在备注里写了数据来源和时效性说明？（看向你）",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "数据有局限性，应该说明清楚。",
+          "nextDialogueId": 2025,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2024,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "实习的第二周，你渐渐摸清了顾云深的习惯。他不喜欢废话，不喜欢情绪化，但只要你做的东西有价值，他就会给你看得见的反馈。冷漠之下，有一套清晰的逻辑。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2026,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2025,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（少见地，把报告放到了左边那摞——那是他留存的文件堆）……不错。下周的任务难度会高一些，你考虑清楚要不要继续。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "我来实习不是为了轻松的。",
+          "nextDialogueId": 2026,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2026,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "某天下班，你在电梯口碰到了顾云深。他身边跟着一个衣着精致的女人，正在对他说什么，他却看起来心不在焉。看到你，他微微点了个头。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2027,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2027,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（走进电梯，那个女人还在讲话，他看向你）今天的数据整理完了？",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "整理完了，已经发到您邮箱了。",
+          "nextDialogueId": 2028,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 3
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "……您旁边的女士还在说话。（小声提醒）",
+          "nextDialogueId": 2029,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2028,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（电梯门关上，那个女人借口接电话先走了）……那些绯闻，不用放在心上。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "我没有在意。（平静）",
+          "nextDialogueId": 2030,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 5
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "您的私生活和我没什么关系。",
+          "nextDialogueId": 2030,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2029,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（看了那个女人一眼，对她说）你先走，我有工作上的事。（等她走后，对你）你倒是挺直接。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "您看起来不太想听她说话。",
+          "nextDialogueId": 2030,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2030,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（少见地沉默了一会儿）……你吃饭了吗？",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "还没，想着把数据做完再说。",
+          "nextDialogueId": 2031,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 3
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "（愣了一下）……没有。",
+          "nextDialogueId": 2031,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2031,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（走向停车场方向，没有回头）跟上来。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "（愣了两秒，跟上去）",
+          "nextDialogueId": 2032,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 5
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "去哪里？（追上去问）",
+          "nextDialogueId": 2032,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2032,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "他带你去了公司楼下一家低调的餐厅，不是什么名贵的地方，但菜做得很好。整顿饭他话不多，你们聊了一些工作上的事，偶尔也有几句不相干的闲话。你第一次觉得他像个普通人。",
+      "backgroundPath": "Backgrounds/Restaurant",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2033,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2033,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "你为什么选这个专业？",
+      "backgroundPath": "Backgrounds/Restaurant",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "感觉能做些有意思的事，虽然还不确定是什么。",
+          "nextDialogueId": 2034,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 5
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "分数刚好够，就来了。（如实说）",
+          "nextDialogueId": 2035,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2034,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（看着你）我22岁创业的时候，也不知道要做什么。只知道不想浪费时间。（停顿）这个答案，比大多数人诚实。",
+      "backgroundPath": "Backgrounds/Restaurant",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2036,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2035,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（难得轻轻笑了一下）……至少你不说谎。（夹了一块菜）吃。",
+      "backgroundPath": "Backgrounds/Restaurant",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2036,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2036,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "实习第三周，公司突然爆出新闻——有媒体拍到顾云深与一位女明星在餐厅共进晚餐。评论区炸锅了，公司PR部门忙得焦头烂额。你坐在工位上，看到他走过来。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2037,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2037,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（把一份新任务放到你桌上，神情如常）今天的舆情报告，下午两点给我。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "好。（接过来，没有多问）",
+          "nextDialogueId": 2038,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 5
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "……新闻的事是真的吗？（脱口而出）",
+          "nextDialogueId": 2039,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2038,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（走了两步，停下来）……你不好奇？",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "好奇是好奇，但那是您的私事。",
+          "nextDialogueId": 2040,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2039,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（看了你一眼）那是公司的商务饭局，她是投资方的合伙人。（顿了顿）你觉得重要吗？",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "……对我来说不重要，对公司股价重要。",
+          "nextDialogueId": 2040,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2040,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（少有地，正眼看了你很久）……你这个人，挺特别的。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "是夸我吗？（抬头）",
+          "nextDialogueId": 2041,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 4
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "（低头继续工作，装作没听见）",
+          "nextDialogueId": 2041,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2041,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（转身走回办公室）两点之前把报告发我。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2042,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2042,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "实习最后一周，公司有一个重要的对外提案，顾云深临时把你加进了提案组。那天加班到深夜，整个办公室只剩你们两个人和几盒没吃完的外卖。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2043,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2043,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "第七页的数据图换掉，太学术了，客户看不懂。（侧过头看你）你觉得呢？",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "换成折线图，配两句话解读，更直观。",
+          "nextDialogueId": 2044,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 5
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "可以试试信息图，视觉冲击力更强。",
+          "nextDialogueId": 2044,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2044,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（点了点头）做出来给我看。（停顿，把一杯咖啡推过来）喝。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "谢谢。（接过来）您也要注意休息。",
+          "nextDialogueId": 2045,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 5
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "（愣了一下，接过来）……谢谢。",
+          "nextDialogueId": 2045,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2045,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（看着窗外的夜景）你实习结束之后，有什么打算？",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "还没想好，走一步看一步。",
+          "nextDialogueId": 2046,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 3
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "想继续做这方面的工作，如果有机会的话。",
+          "nextDialogueId": 2047,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2046,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（沉默片刻）走一步看一步，不是坏事。但最好知道自己在走向哪里。（转头看你）我可以给你一个正式的offer，考虑一下。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "（心跳了一下）……您是认真的吗？",
+          "nextDialogueId": 2048,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2047,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（看着你，眼神里有什么东西不一样了）……机会的事，我可以给你一个答案。（停顿）但不只是工作上的。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "（心跳加速）您是什么意思？",
+          "nextDialogueId": 2049,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2048,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（站起来，走到窗边）我做事向来认真。（回头）包括……对某些人。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "（站起来走到他旁边）某些人是指……",
+          "nextDialogueId": 2050,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2049,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "我见过很多人，能让我多看一眼的不多。（直视着你）你是其中一个。这不是在谈工作。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "（沉默，心里很乱）……我需要想一想。",
+          "nextDialogueId": 2051,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 5
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "（看着他）我也是。（轻声）",
+          "nextDialogueId": 2052,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2050,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（少见地，没有保持距离，靠近了一步）从演讲台上第一次看到你开始。（平静，像是在陈述一个事实）我对你有兴趣，不只是工作上的。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "（心跳很快，没有移开视线）……那您打算怎么办？",
+          "nextDialogueId": 2052,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 8
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "（后退了半步）……您喝多了吗？",
+          "nextDialogueId": 2053,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2051,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（点头）可以。（停顿）但我等不了太久。（转身回到桌前）先把提案做完。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2054,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2052,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（沉默了几秒，眼神里少见地有了温度）……那就这样定了。（顿了顿，声音低了一些）以后，不用叫我顾总。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "（轻声）……顾云深。",
+          "nextDialogueId": 2054,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2053,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（微微挑眉）我从不喝酒。（停顿）这句话，我想说很久了。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "（心里一阵乱）……我听到了。",
+          "nextDialogueId": 2054,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2054,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "深夜的办公室里，城市的灯火在窗外延伸。提案最终在凌晨完成，顾云深送你到楼下，没有多说什么，只是在你上车前，低声说了一句话。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "继续",
+          "nextDialogueId": 2055,
+          "favorabilityChanges": []
+        }
+      ]
+    },
+    {
+      "id": 2055,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（低头，声音很轻）……路上小心。（停顿）明天，还是九点。",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "（忍住笑）好，顾总。",
+          "nextDialogueId": 2056,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 5
+            }
+          ]
+        },
+        {
+          "choiceId": 2,
+          "text": "（轻声）……晚安。",
+          "nextDialogueId": 2056,
+          "favorabilityChanges": [
+            {
+              "characterId": 2,
+              "change": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2056,
+      "characterId": 2,
+      "characterName": "顾云深",
+      "text": "（看着你上车，直到车消失在路口，才转身回去。嘴角，有一个极轻的弧度。）",
+      "backgroundPath": "Backgrounds/Office",
+      "choices": [
+        {
+          "choiceId": 1,
+          "text": "完成",
+          "nextDialogueId": -1,
+          "favorabilityChanges": []
+        }
       ]
     }
   ]

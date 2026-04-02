@@ -38,8 +38,25 @@ public class DialogueManager : MonoBehaviour
 
 IEnumerator StartAfterGameManager()
 {
-    yield return null; // 等一帧
-    StartDialogue(1001);
+     yield return null;
+
+    int selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", 1);
+
+    switch (selectedCharacter)
+    {
+        case 1:
+            StartDialogue(1001); // 林晨西
+            break;
+        case 2:
+            StartDialogue(2001); // 顾云深
+            break;
+        case 3:
+            StartDialogue(3001); // 夏星河
+            break;
+        default:
+            StartDialogue(1001);
+            break;
+    }
 }
 
     // 开始显示指定id的对话
