@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GuScene.unity
     guid: fd7c6353f4820b949a666d6edb95b621
+  - enabled: 1
+    path: Assets/Scenes/XiaScene.unity
+    guid: 01b1cbfbe59d6f44685cd1b630f9ca8c
   m_configObjects: {}

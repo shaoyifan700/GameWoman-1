@@ -1735,6 +1735,542 @@
           "favorabilityChanges": []
         }
       ]
+    },
+  
+
+
+ 
+    {
+      "id": 3001,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "社团招新的季节，校园里到处贴满了海报。你路过操场的时候，篮球场上一阵骚动，有人在喊：'夏星河投了！'你随意看了一眼，只见一个男生接球转身，动作流畅得像是慢镜头。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [{"choiceId": 1, "text": "继续", "nextDialogueId": 3002, "favorabilityChanges": []}]
+    },
+    {
+      "id": 3002,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "你没多看，低头继续走，结果一个篮球不知从哪飞过来，正好砸在你手里的奶茶杯上。奶茶洒了你一身。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [{"choiceId": 1, "text": "继续", "nextDialogueId": 3003, "favorabilityChanges": []}]
+    },
+    {
+      "id": 3003,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "啊——！姐姐对不起对不起！（从场地里跑过来，气都没喘匀）我赔我赔！",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "算了，不小心的。（擦衣服）", "nextDialogueId": 3004, "favorabilityChanges": [{"characterId": 3, "change": 3}]},
+        {"choiceId": 2, "text": "你打篮球不长眼睛吗？", "nextDialogueId": 3005, "favorabilityChanges": [{"characterId": 3, "change": 0}]}
+      ]
+    },
+    {
+      "id": 3004,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "姐姐你人真好！（凑近看你衣服）哎这个洗不掉的，你等着，我去给你买一杯一样的，顺便——（抬头冲你笑）认识一下？我叫夏星河，大二的，你叫什么？",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "告诉他名字。", "nextDialogueId": 3006, "favorabilityChanges": [{"characterId": 3, "change": 3}]},
+        {"choiceId": 2, "text": "买奶茶就好，不用认识。", "nextDialogueId": 3007, "favorabilityChanges": [{"characterId": 3, "change": 2}]}
+      ]
+    },
+    {
+      "id": 3005,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（一点都没有被凶到的意思，反而眼睛亮了）哇姐姐生气了，但是生气也好看。（手已经伸过来要帮你擦）来来来我帮你擦。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "走开，自己来。（后退一步）", "nextDialogueId": 3006, "favorabilityChanges": [{"characterId": 3, "change": 2}]},
+        {"choiceId": 2, "text": "……少来这套。", "nextDialogueId": 3006, "favorabilityChanges": [{"characterId": 3, "change": 3}]}
+      ]
+    },
+    {
+      "id": 3006,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（已经跑去买奶茶了，五分钟后捧着两杯回来）姐姐！一杯赔你的，一杯请你的，两杯都是我的心意。（冲你咧嘴笑）",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "（接过来）谢谢。（转身走）", "nextDialogueId": 3008, "favorabilityChanges": [{"characterId": 3, "change": 2}]},
+        {"choiceId": 2, "text": "一杯就够了。（只拿一杯）", "nextDialogueId": 3008, "favorabilityChanges": [{"characterId": 3, "change": 3}]}
+      ]
+    },
+    {
+      "id": 3007,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（已经转身跑了）等我两分钟！（五分钟后捧着奶茶回来，气喘吁吁）姐姐，我买回来了。（顿了顿）你叫什么名字？不告诉我我要叫你奶茶姐姐了。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "（无奈）……行了，告诉你吧。", "nextDialogueId": 3008, "favorabilityChanges": [{"characterId": 3, "change": 4}]}
+      ]
+    },
+    {
+      "id": 3008,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（在你身边走）姐姐你去哪，我送你！",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "不用，我自己走。", "nextDialogueId": 3009, "favorabilityChanges": [{"characterId": 3, "change": 1}]},
+        {"choiceId": 2, "text": "图书馆。（随口说）", "nextDialogueId": 3010, "favorabilityChanges": [{"characterId": 3, "change": 2}]}
+      ]
+    },
+    {
+      "id": 3009,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（毫不气馁，跟上来）我也正好要去那边！（凑近）姐姐你是哪个院的，说不定我们还是邻居。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "（停下脚步）你是不是很烦人？", "nextDialogueId": 3011, "favorabilityChanges": [{"characterId": 3, "change": 3}]},
+        {"choiceId": 2, "text": "（叹气继续走）随便你。", "nextDialogueId": 3011, "favorabilityChanges": [{"characterId": 3, "change": 2}]}
+      ]
+    },
+    {
+      "id": 3010,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "图书馆！我也去！（立刻跟上）姐姐是要自习吗，我陪你。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "你不是在打篮球吗？", "nextDialogueId": 3011, "favorabilityChanges": [{"characterId": 3, "change": 3}]},
+        {"choiceId": 2, "text": "……随便你。", "nextDialogueId": 3011, "favorabilityChanges": [{"characterId": 3, "change": 2}]}
+      ]
+    },
+    {
+      "id": 3011,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（一脸无辜）我是有点烦，但是姐姐你不讨厌我，不然早就走了。（歪头看你）对吧？",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "……（沉默，因为他说的是对的）", "nextDialogueId": 3012, "favorabilityChanges": [{"characterId": 3, "change": 4}]},
+        {"choiceId": 2, "text": "别自作多情。", "nextDialogueId": 3012, "favorabilityChanges": [{"characterId": 3, "change": 3}]}
+      ]
+    },
+    {
+      "id": 3012,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（笑得很开心）姐姐沉默就是默认！（凑近）那以后我来找你玩，你不能赶我走。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "谁说了。（但没有否认）", "nextDialogueId": 3013, "favorabilityChanges": [{"characterId": 3, "change": 3}]}
+      ]
+    },
+    {
+      "id": 3013,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "之后的日子里，夏星河像是认准了你。食堂偶遇要同桌，自习室碰到要坐旁边，甚至有一次你去超市，转角就看见他推着购物车冲你招手。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [{"choiceId": 1, "text": "继续", "nextDialogueId": 3014, "favorabilityChanges": []}]
+    },
+    {
+      "id": 3014,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（在食堂托盘上摆了一份你最喜欢的菜推过来）姐姐，你今天看起来有点累。",
+      "backgroundPath": "Backgrounds/Cafeteria",
+      "choices": [
+        {"choiceId": 1, "text": "你怎么知道我喜欢吃这个？", "nextDialogueId": 3015, "favorabilityChanges": [{"characterId": 3, "change": 5}]},
+        {"choiceId": 2, "text": "……嗯，没睡好。", "nextDialogueId": 3016, "favorabilityChanges": [{"characterId": 3, "change": 3}]}
+      ]
+    },
+    {
+      "id": 3015,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（理所当然地）因为我每次偷看你吃饭，你吃这个的时候眼睛最亮。（歪头）被我发现了吧，姐姐你喜欢什么我都记着呢。",
+      "backgroundPath": "Backgrounds/Cafeteria",
+      "choices": [
+        {"choiceId": 1, "text": "……你有病吧。（但嘴角忍不住翘起来）", "nextDialogueId": 3017, "favorabilityChanges": [{"characterId": 3, "change": 5}]},
+        {"choiceId": 2, "text": "（脸微微红）谁让你记的。", "nextDialogueId": 3017, "favorabilityChanges": [{"characterId": 3, "change": 4}]}
+      ]
+    },
+    {
+      "id": 3016,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "没睡好要多吃点。（把自己的甜品也推过来）这个补充能量。（认真看着你）姐姐最近在忙什么，说给我听？",
+      "backgroundPath": "Backgrounds/Cafeteria",
+      "choices": [
+        {"choiceId": 1, "text": "作业堆了很多，有点焦虑。", "nextDialogueId": 3017, "favorabilityChanges": [{"characterId": 3, "change": 3}]},
+        {"choiceId": 2, "text": "没什么，就是日常的事。", "nextDialogueId": 3017, "favorabilityChanges": [{"characterId": 3, "change": 2}]}
+      ]
+    },
+    {
+      "id": 3017,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（托腮看着你）姐姐，我跟你说一件事。",
+      "backgroundPath": "Backgrounds/Cafeteria",
+      "choices": [
+        {"choiceId": 1, "text": "什么事？", "nextDialogueId": 3018, "favorabilityChanges": [{"characterId": 3, "change": 2}]}
+      ]
+    },
+    {
+      "id": 3018,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "我喜欢你已经喜欢了三个星期了。（平静得像在说今天天气不错）怎么样，你有没有被感动到？",
+      "backgroundPath": "Backgrounds/Cafeteria",
+      "choices": [
+        {"choiceId": 1, "text": "……你说这种话不带任何表情的吗？", "nextDialogueId": 3019, "favorabilityChanges": [{"characterId": 3, "change": 5}]},
+        {"choiceId": 2, "text": "你认识我才多久。", "nextDialogueId": 3020, "favorabilityChanges": [{"characterId": 3, "change": 3}]}
+      ]
+    },
+    {
+      "id": 3019,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（立刻换上一脸深情）那这样呢——姐姐，我喜欢你。（停顿）感动到了吗？",
+      "backgroundPath": "Backgrounds/Cafeteria",
+      "choices": [
+        {"choiceId": 1, "text": "（忍住笑）你真的很烦。", "nextDialogueId": 3021, "favorabilityChanges": [{"characterId": 3, "change": 4}]},
+        {"choiceId": 2, "text": "……（低头吃饭，没有回答）", "nextDialogueId": 3021, "favorabilityChanges": [{"characterId": 3, "change": 5}]}
+      ]
+    },
+    {
+      "id": 3020,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "时间长短不重要，重要的是我确定了。（认真看着你）姐姐，喜欢一个人不需要理由的。",
+      "backgroundPath": "Backgrounds/Cafeteria",
+      "choices": [
+        {"choiceId": 1, "text": "……（说不出话来）", "nextDialogueId": 3021, "favorabilityChanges": [{"characterId": 3, "change": 5}]},
+        {"choiceId": 2, "text": "少来这套情话。", "nextDialogueId": 3021, "favorabilityChanges": [{"characterId": 3, "change": 3}]}
+      ]
+    },
+    {
+      "id": 3021,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（笑眯眯的）姐姐不拒绝就是进步！我继续努力。（拍拍你的头）吃饭。",
+      "backgroundPath": "Backgrounds/Cafeteria",
+      "choices": [{"choiceId": 1, "text": "继续", "nextDialogueId": 3022, "favorabilityChanges": []}]
+    },
+    {
+      "id": 3022,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "某天下雨，你忘带伞被堵在教学楼门口。正发愁，一把伞从旁边递过来。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [{"choiceId": 1, "text": "继续", "nextDialogueId": 3023, "favorabilityChanges": []}]
+    },
+    {
+      "id": 3023,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（撑着另一把伞站在旁边，淋湿了半边肩膀）姐姐，拿着。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "你怎么知道我没带伞？", "nextDialogueId": 3024, "favorabilityChanges": [{"characterId": 3, "change": 4}]},
+        {"choiceId": 2, "text": "你怎么有两把伞？", "nextDialogueId": 3025, "favorabilityChanges": [{"characterId": 3, "change": 3}]}
+      ]
+    },
+    {
+      "id": 3024,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（理所当然）因为我今天特意看了天气预报，然后又特意看了你书包，发现没有伞的形状。（歪头）所以我多带了一把。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "……你有点可怕你知道吗。（但接了伞）", "nextDialogueId": 3026, "favorabilityChanges": [{"characterId": 3, "change": 6}]},
+        {"choiceId": 2, "text": "（沉默接过伞）……谢谢。", "nextDialogueId": 3026, "favorabilityChanges": [{"characterId": 3, "change": 5}]}
+      ]
+    },
+    {
+      "id": 3025,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "特意多带的。（笑）就知道姐姐会忘。（把伞塞进你手里）拿好，我送你回宿舍。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "你会淋湿的。", "nextDialogueId": 3026, "favorabilityChanges": [{"characterId": 3, "change": 4}]},
+        {"choiceId": 2, "text": "……好吧，谢谢。", "nextDialogueId": 3026, "favorabilityChanges": [{"characterId": 3, "change": 4}]}
+      ]
+    },
+    {
+      "id": 3026,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（走在你旁边，故意把伞往你这边歪，自己淋着雨）没事，淋点雨而已。（侧头看你）姐姐你的眼睛真的很好看，下雨天看起来更漂亮。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "伞往你那边撑点，你都湿了。（把伞推回去）", "nextDialogueId": 3027, "favorabilityChanges": [{"characterId": 3, "change": 7}]},
+        {"choiceId": 2, "text": "少说情话，走快点。", "nextDialogueId": 3027, "favorabilityChanges": [{"characterId": 3, "change": 4}]}
+      ]
+    },
+    {
+      "id": 3027,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（眼睛亮了）姐姐关心我！（凑近）那我们共用一把伞，这样两个人都不湿。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "（无奈，但还是凑近了）……行吧。", "nextDialogueId": 3028, "favorabilityChanges": [{"characterId": 3, "change": 6}]},
+        {"choiceId": 2, "text": "（往旁边移了一步）想得美。", "nextDialogueId": 3028, "favorabilityChanges": [{"characterId": 3, "change": 4}]}
+      ]
+    },
+    {
+      "id": 3028,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "雨声很大，你们走得很慢。夏星河难得没有说话，只是安静地撑着伞走在你旁边。那一刻你突然觉得，他其实不只是表面上那个没心没肺的样子。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [{"choiceId": 1, "text": "继续", "nextDialogueId": 3029, "favorabilityChanges": []}]
+    },
+    {
+      "id": 3029,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（快到宿舍楼了，停下来）姐姐，我说一句话你别笑我。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "说吧。", "nextDialogueId": 3030, "favorabilityChanges": [{"characterId": 3, "change": 3}]}
+      ]
+    },
+    {
+      "id": 3030,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "我今天很开心。（停顿）就是跟你一起淋雨走回来这段路，很开心。（抬头看你）你呢？",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "……也还好。（轻声）", "nextDialogueId": 3031, "favorabilityChanges": [{"characterId": 3, "change": 6}]},
+        {"choiceId": 2, "text": "你这句话倒是不像情话了。", "nextDialogueId": 3031, "favorabilityChanges": [{"characterId": 3, "change": 5}]}
+      ]
+    },
+    {
+      "id": 3031,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（笑了，这次笑得很真）够了。（把伞塞给你）进去吧，明天见。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [{"choiceId": 1, "text": "继续", "nextDialogueId": 3032, "favorabilityChanges": []}]
+    },
+    {
+      "id": 3032,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "期末考试周到了，图书馆座位一位难求。你占了个角落的位置，把书摊开，没一会儿，旁边椅子被人拉开了。",
+      "backgroundPath": "Backgrounds/Library",
+      "choices": [{"choiceId": 1, "text": "继续", "nextDialogueId": 3033, "favorabilityChanges": []}]
+    },
+    {
+      "id": 3033,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（放下书包坐下，低声）姐姐，巧不巧。（掏出课本，一本正经）我们一起自习。",
+      "backgroundPath": "Backgrounds/Library",
+      "choices": [
+        {"choiceId": 1, "text": "（压低声音）你是跟过来的吧。", "nextDialogueId": 3034, "favorabilityChanges": [{"characterId": 3, "change": 3}]},
+        {"choiceId": 2, "text": "（无奈）坐吧，别说话。", "nextDialogueId": 3035, "favorabilityChanges": [{"characterId": 3, "change": 3}]}
+      ]
+    },
+    {
+      "id": 3034,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（一脸无辜）哪有，我只是恰好知道姐姐喜欢坐这个角落，然后恰好今天来图书馆了。（翻开书）复习了吗，要不要我帮你考考？",
+      "backgroundPath": "Backgrounds/Library",
+      "choices": [
+        {"choiceId": 1, "text": "你学弟还能帮我考？", "nextDialogueId": 3036, "favorabilityChanges": [{"characterId": 3, "change": 3}]},
+        {"choiceId": 2, "text": "……行，考我。", "nextDialogueId": 3036, "favorabilityChanges": [{"characterId": 3, "change": 4}]}
+      ]
+    },
+    {
+      "id": 3035,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（乖乖点头，翻开书。过了半小时，悄悄把一颗糖推到你面前，继续看书，假装什么都没发生。）",
+      "backgroundPath": "Backgrounds/Library",
+      "choices": [
+        {"choiceId": 1, "text": "（看着那颗糖，忍不住笑了）", "nextDialogueId": 3036, "favorabilityChanges": [{"characterId": 3, "change": 5}]}
+      ]
+    },
+    {
+      "id": 3036,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（侧过头，压低声音）姐姐笑起来真好看，比书好看多了。（被你瞪了一眼，立刻低头）好好好，看书看书。",
+      "backgroundPath": "Backgrounds/Library",
+      "choices": [{"choiceId": 1, "text": "继续", "nextDialogueId": 3037, "favorabilityChanges": []}]
+    },
+    {
+      "id": 3037,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "考试结束那天，你们在校门口碰到了。夏星河手里提着两杯奶茶，看到你的第一句话是——",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [{"choiceId": 1, "text": "继续", "nextDialogueId": 3038, "favorabilityChanges": []}]
+    },
+    {
+      "id": 3038,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "姐姐！考完了！（把奶茶塞给你）庆祝一下，今晚出去玩吗？",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "就我们两个？", "nextDialogueId": 3039, "favorabilityChanges": [{"characterId": 3, "change": 3}]},
+        {"choiceId": 2, "text": "……去哪里？", "nextDialogueId": 3040, "favorabilityChanges": [{"characterId": 3, "change": 4}]}
+      ]
+    },
+    {
+      "id": 3039,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（眼睛弯起来）当然，我才不想带别人。（凑近）姐姐，这是约会。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "谁跟你约会。（但没有拒绝）", "nextDialogueId": 3041, "favorabilityChanges": [{"characterId": 3, "change": 5}]},
+        {"choiceId": 2, "text": "……你能不能正常说话。", "nextDialogueId": 3041, "favorabilityChanges": [{"characterId": 3, "change": 4}]}
+      ]
+    },
+    {
+      "id": 3040,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "哪里都行，只要有姐姐就行。（歪头）你想去哪，我陪你。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "……那去夜市吧。", "nextDialogueId": 3041, "favorabilityChanges": [{"characterId": 3, "change": 4}]}
+      ]
+    },
+    {
+      "id": 3041,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "夜市很热闹，你们走了很久，吃了很多乱七八糟的东西。夏星河一路上叽叽喳喳，但每次你停下来看什么，他都会默默等着你，不催不说话。",
+      "backgroundPath": "Backgrounds/Festival",
+      "choices": [{"choiceId": 1, "text": "继续", "nextDialogueId": 3042, "favorabilityChanges": []}]
+    },
+    {
+      "id": 3042,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（在一个摊子前停下来，拿起一对手绳比划了一下）姐姐，这个。",
+      "backgroundPath": "Backgrounds/Festival",
+      "choices": [
+        {"choiceId": 1, "text": "什么？（凑过去看）", "nextDialogueId": 3043, "favorabilityChanges": [{"characterId": 3, "change": 3}]}
+      ]
+    },
+    {
+      "id": 3043,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（已经把其中一条系在你手腕上了，另一条系在自己手上）一人一条。（认真看着你）这样你去哪我都知道你在。",
+      "backgroundPath": "Backgrounds/Festival",
+      "choices": [
+        {"choiceId": 1, "text": "……你什么时候变这么肉麻了。（但没有摘）", "nextDialogueId": 3044, "favorabilityChanges": [{"characterId": 3, "change": 6}]},
+        {"choiceId": 2, "text": "（低头看手腕上的绳子，没有说话）", "nextDialogueId": 3044, "favorabilityChanges": [{"characterId": 3, "change": 5}]}
+      ]
+    },
+    {
+      "id": 3044,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（侧过脸看你，笑意淡了一些，认真了很多）姐姐，我不只是在玩。你知道吗？",
+      "backgroundPath": "Backgrounds/Festival",
+      "choices": [
+        {"choiceId": 1, "text": "……我知道。（轻声）", "nextDialogueId": 3045, "favorabilityChanges": [{"characterId": 3, "change": 7}]},
+        {"choiceId": 2, "text": "……（看着他，没有说话）", "nextDialogueId": 3045, "favorabilityChanges": [{"characterId": 3, "change": 5}]}
+      ]
+    },
+    {
+      "id": 3045,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（重新笑起来，但这次眼睛里是真实的温柔）好。（拉着你继续走）走，去吃糖葫芦。",
+      "backgroundPath": "Backgrounds/Festival",
+      "choices": [{"choiceId": 1, "text": "继续", "nextDialogueId": 3046, "favorabilityChanges": []}]
+    },
+    {
+      "id": 3046,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "回去的路上，夜风很凉。夏星河走在你左边，把你挡在里侧，默默的，没有说话。你看了他一眼，他正好也在看你。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [{"choiceId": 1, "text": "继续", "nextDialogueId": 3047, "favorabilityChanges": []}]
+    },
+    {
+      "id": 3047,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（停下来，认真看着你）姐姐，我喜欢你。（停顿）这次不是情话，就是……我想让你知道。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "我知道。（轻声）我也……喜欢你。", "nextDialogueId": 3048, "favorabilityChanges": [{"characterId": 3, "change": 10}]},
+        {"choiceId": 2, "text": "……让我再想想。", "nextDialogueId": 3049, "favorabilityChanges": [{"characterId": 3, "change": 4}]}
+      ]
+    },
+    {
+      "id": 3048,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（愣了一秒，然后笑得像个傻瓜）……真的吗？（声音有点抖）你再说一遍！",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "（忍住笑）就说一遍。", "nextDialogueId": 3050, "favorabilityChanges": [{"characterId": 3, "change": 5}]},
+        {"choiceId": 2, "text": "……（轻轻推了他一下）烦死了。", "nextDialogueId": 3050, "favorabilityChanges": [{"characterId": 3, "change": 5}]}
+      ]
+    },
+    {
+      "id": 3049,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（点头，眼神很认真）好，我等。（停顿，嘴角又弯起来）但是我会继续烦你的，你要做好心理准备。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "……随便你。（但心里有点暖）", "nextDialogueId": 3050, "favorabilityChanges": [{"characterId": 3, "change": 5}]}
+      ]
+    },
+    {
+      "id": 3050,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（把手伸过来）姐姐，牵着走？",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "（把手放进他手里）……走吧。", "nextDialogueId": 3051, "favorabilityChanges": [{"characterId": 3, "change": 8}]},
+        {"choiceId": 2, "text": "想得美。（但跟上了他的步伐）", "nextDialogueId": 3051, "favorabilityChanges": [{"characterId": 3, "change": 6}]}
+      ]
+    },
+    {
+      "id": 3051,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（走了几步，低头看你，轻声）姐姐，谢谢你没有一开始就把我赶走。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "……早知道就赶走了。（嘴硬）", "nextDialogueId": 3052, "favorabilityChanges": [{"characterId": 3, "change": 5}]},
+        {"choiceId": 2, "text": "……（轻轻握紧了他的手）", "nextDialogueId": 3052, "favorabilityChanges": [{"characterId": 3, "change": 7}]}
+      ]
+    },
+    {
+      "id": 3052,
+      "characterId": 3,
+      "characterName": "夏星河",
+      "text": "（笑出声）骗人，姐姐舍不得的。（侧过头看你，眼睛弯弯的，但眼神很认真）以后，我会一直在的。",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [{"choiceId": 1, "text": "继续", "nextDialogueId": 3053, "favorabilityChanges": []}]
+    },
+    {
+      "id": 3053,
+      "characterId": 0,
+      "characterName": "旁白",
+      "text": "夜风把路灯拉出长长的影子，你们的影子交叠在一起。夏星河说话总是没个正形，但这一刻他说的每一个字，你都信。\n\n——夏星河篇章完——",
+      "backgroundPath": "Backgrounds/School",
+      "choices": [
+        {"choiceId": 1, "text": "完成", "nextDialogueId": -1, "favorabilityChanges": []}
+      ]
     }
   ]
 }
