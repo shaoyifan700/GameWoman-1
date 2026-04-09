@@ -133,9 +133,9 @@ IEnumerator StartAfterGameManager()
     }
 
     // 玩家选择选项时触发
+   
     void OnChoiceSelected(Choice choice)
     {
-        // 更新好感度
         if (choice.favorabilityChanges != null)
         {
             foreach (var change in choice.favorabilityChanges)
@@ -144,15 +144,15 @@ IEnumerator StartAfterGameManager()
             }
         }
 
-        // 跳转到下一条对话，-1表示对话结束
+        // 刷新好感度UI
+        FavorabilityUI favUI = FindObjectOfType<FavorabilityUI>();
+        if (favUI != null)
+            favUI.UpdateHearts();
+
         if (choice.nextDialogueId == -1)
-        {
             EndDialogue();
-        }
         else
-        {
             StartDialogue(choice.nextDialogueId);
-        }
     }
 
     // 清除所有选项按钮

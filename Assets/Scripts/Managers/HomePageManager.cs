@@ -39,7 +39,7 @@ public class HomePageManager : MonoBehaviour
     public void OnClickXiaXinghe()
     {
         PlayerPrefs.SetInt("SelectedCharacter", 3);
-        SceneManager.LoadScene("GuScene");
+        SceneManager.LoadScene("XiaScene");
     }
 
     public void OnClickQuit()
