@@ -47,49 +47,69 @@ public class UserSelectManager : MonoBehaviour
 }
     // 选择已有用户
     public void SelectUser(string userName)
+{
+    SaveManager.Instance.SetCurrentUser(userName);
+
+    SaveData data = SaveManager.Instance.LoadGame(userName);
+    if (data != null)
     {
-        SaveManager.Instance.SetCurrentUser(userName);
-
-        // 如果有存档，读取存档数据
-        SaveData data = SaveManager.Instance.LoadGame(userName);
-        if (data != null)
-        {
-            PlayerPrefs.SetInt("SelectedCharacter", data.selectedCharacter);
-            // 好感度恢复在 GameManager 里处理
-            PlayerPrefs.SetInt("LoadDialogueId", data.currentDialogueId);
-            PlayerPrefs.SetInt("LoadFav1", data.favorability1);
-            PlayerPrefs.SetInt("LoadFav2", data.favorability2);
-            PlayerPrefs.SetInt("LoadFav3", data.favorability3);
-        }
-
-        SceneManager.LoadScene("HomePage");
+        // 有存档，读取存档数据
+        PlayerPrefs.SetInt("SelectedCharacter", data.selectedCharacter);
+        PlayerPrefs.SetInt("LoadDialogueId", data.currentDialogueId);
+        PlayerPrefs.SetInt("SavedCharacter", data.selectedCharacter);
+        PlayerPrefs.SetInt("LoadFav1", data.favorability1);
+        PlayerPrefs.SetInt("LoadFav2", data.favorability2);
+        PlayerPrefs.SetInt("LoadFav3", data.favorability3);
     }
+    else
+    {
+        // 没有存档，从头开始
+        PlayerPrefs.SetInt("LoadDialogueId", 0);
+        PlayerPrefs.SetInt("SavedCharacter", 0);
+        PlayerPrefs.SetInt("LoadFav1", 0);
+        PlayerPrefs.SetInt("LoadFav2", 0);
+        PlayerPrefs.SetInt("LoadFav3", 0);
+    }
+    PlayerPrefs.Save();
+
+    SceneManager.LoadScene("HomePage");
+}
 
     // 创建新用户
     public void OnClickCreate()
+{
+    string newUser = inputField.text.Trim();
+
+    if (string.IsNullOrEmpty(newUser))
     {
-        string newUser = inputField.text.Trim();
-
-        if (string.IsNullOrEmpty(newUser))
-        {
-            tipText.text = "用户名不能为空！";
-            return;
-        }
-
-        if (newUser.Length > 10)
-        {
-            tipText.text = "用户名不能超过10个字！";
-            return;
-        }
-
-        SaveManager.Instance.AddUserToList(newUser);
-        SaveManager.Instance.SetCurrentUser(newUser);
-        inputField.text = "";
-        tipText.text = "";
-
-        RefreshUserList();
-        SceneManager.LoadScene("HomePage");
+        tipText.text = "用户名不能为空！";
+        return;
     }
+
+    if (newUser.Length > 10)
+    {
+        tipText.text = "用户名不能超过10个字！";
+        return;
+    }
+
+    SaveManager.Instance.AddUserToList(newUser);
+    SaveManager.Instance.SetCurrentUser(newUser);
+
+    // 新用户清除所有存档读取标记，从头开始
+    PlayerPrefs.SetInt("LoadDialogueId", 0);
+    PlayerPrefs.SetInt("SavedCharacter", 0);
+    PlayerPrefs.SetInt("LoadFav1", 0);
+    PlayerPrefs.SetInt("LoadFav2", 0);
+    PlayerPrefs.SetInt("LoadFav3", 0);
+    PlayerPrefs.Save();
+
+    inputField.text = "";
+    tipText.text = "";
+
+    RefreshUserList();
+    SceneManager.LoadScene("HomePage");
+}
+    
 
     // 删除选中用户（简单版：删除输入框里的用户名）
     public void OnClickDelete()

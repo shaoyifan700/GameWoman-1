@@ -19,17 +19,18 @@ public class SaveManager : MonoBehaviour
     private string currentUser = "";
 
     void Awake()
+{
+    if (Instance == null)
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
+    else
+    {
+        Destroy(gameObject);
+        return;
+    }
+}
 
     // 设置当前用户
     public void SetCurrentUser(string userName)
@@ -44,23 +45,32 @@ public class SaveManager : MonoBehaviour
 
     // 保存存档
     public void SaveGame(int currentDialogueId)
-    {
-        if (string.IsNullOrEmpty(currentUser)) return;
+{
+    Debug.Log("当前用户：" + currentUser); // 加这行
+    if (string.IsNullOrEmpty(currentUser)) return;
 
-        SaveData data = new SaveData();
-        data.userName = currentUser;
-        data.currentDialogueId = currentDialogueId;
-        data.selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", 1);
-        data.favorability1 = GameManager.Instance.GetFavorability(1);
-        data.favorability2 = GameManager.Instance.GetFavorability(2);
-        data.favorability3 = GameManager.Instance.GetFavorability(3);
+    SaveData data = new SaveData();
+    data.userName = currentUser;
+    data.currentDialogueId = currentDialogueId;
+    data.selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", 1);
+    data.favorability1 = GameManager.Instance.GetFavorability(1);
+    data.favorability2 = GameManager.Instance.GetFavorability(2);
+    data.favorability3 = GameManager.Instance.GetFavorability(3);
 
-        string json = JsonUtility.ToJson(data);
-        PlayerPrefs.SetString("Save_" + currentUser, json);
-        PlayerPrefs.Save();
+    string json = JsonUtility.ToJson(data);
+    PlayerPrefs.SetString("Save_" + currentUser, json);
+    PlayerPrefs.Save();
 
-        Debug.Log("存档成功：" + currentUser);
-    }
+    // 同时保存到 PlayerPrefs 方便读取
+    PlayerPrefs.SetInt("SavedCharacter", data.selectedCharacter);
+    PlayerPrefs.SetInt("LoadDialogueId", currentDialogueId);
+    PlayerPrefs.SetInt("LoadFav1", data.favorability1);
+    PlayerPrefs.SetInt("LoadFav2", data.favorability2);
+    PlayerPrefs.SetInt("LoadFav3", data.favorability3);
+    PlayerPrefs.Save();
+
+    Debug.Log("存档成功：" + currentUser);
+}
 
     // 读取存档
     public SaveData LoadGame(string userName)

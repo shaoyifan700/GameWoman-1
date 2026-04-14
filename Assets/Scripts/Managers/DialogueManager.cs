@@ -36,28 +36,40 @@ public class DialogueManager : MonoBehaviour
     StartCoroutine(StartAfterGameManager());
 }
 
+
+
 IEnumerator StartAfterGameManager()
 {
-     yield return null;
+    yield return null;
 
     int selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", 1);
 
-    switch (selectedCharacter)
+    // 直接从存档文件读取，不依赖 PlayerPrefs 的 LoadDialogueId
+    SaveData data = null;
+    if (SaveManager.Instance != null && !string.IsNullOrEmpty(SaveManager.Instance.GetCurrentUser()))
+        data = SaveManager.Instance.LoadGame(SaveManager.Instance.GetCurrentUser());
+
+    if (data != null && data.currentDialogueId > 0 && data.selectedCharacter == selectedCharacter)
     {
-        case 1:
-            StartDialogue(1001); // 林晨西
-            break;
-        case 2:
-            StartDialogue(2001); // 顾云深
-            break;
-        case 3:
-            StartDialogue(3001); // 夏星河
-            break;
-        default:
-            StartDialogue(1001);
-            break;
+        // 有存档且角色匹配，从存档位置继续
+        GameManager.Instance.UpdateFavorability(1, data.favorability1);
+        GameManager.Instance.UpdateFavorability(2, data.favorability2);
+        GameManager.Instance.UpdateFavorability(3, data.favorability3);
+        StartDialogue(data.currentDialogueId);
+    }
+    else
+    {
+        // 没有存档或角色不匹配，从头开始
+        switch (selectedCharacter)
+        {
+            case 1: StartDialogue(1001); break;
+            case 2: StartDialogue(2001); break;
+            case 3: StartDialogue(3001); break;
+            default: StartDialogue(1001); break;
+        }
     }
 }
+
 
     // 开始显示指定id的对话
     public void StartDialogue(int dialogueId)
@@ -154,14 +166,17 @@ IEnumerator StartAfterGameManager()
         else
             StartDialogue(choice.nextDialogueId);
 
-        // 自动保存
-        if (SaveManager.Instance != null)
-            SaveManager.Instance.SaveGame(choice.nextDialogueId);
-
+        
         if (choice.nextDialogueId == -1)
             EndDialogue();
         else
             StartDialogue(choice.nextDialogueId);
+    }
+   
+    // 让 PauseManager 能读取当前对话 ID
+    public int GetCurrentDialogueId()
+    {
+        return currentDialogue != null ? currentDialogue.id : 0;
     }
 
     // 清除所有选项按钮
