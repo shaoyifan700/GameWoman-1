@@ -153,6 +153,15 @@ IEnumerator StartAfterGameManager()
             EndDialogue();
         else
             StartDialogue(choice.nextDialogueId);
+
+        // 自动保存
+        if (SaveManager.Instance != null)
+            SaveManager.Instance.SaveGame(choice.nextDialogueId);
+
+        if (choice.nextDialogueId == -1)
+            EndDialogue();
+        else
+            StartDialogue(choice.nextDialogueId);
     }
 
     // 清除所有选项按钮
