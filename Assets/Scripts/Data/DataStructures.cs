@@ -35,6 +35,8 @@ public class Dialogue
     public string characterName;
     public string text;
     public string backgroundPath;
+        public string expression; // 新增：表情字段（Normal/Smile）
+
     public List<Choice> choices = new List<Choice>();
 }
 

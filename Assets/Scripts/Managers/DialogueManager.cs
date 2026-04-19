@@ -89,39 +89,38 @@ IEnumerator StartAfterGameManager()
 
     // 显示对话内容
     void ShowDialogue(Dialogue dialogue)
+{
+    dialoguePanel.SetActive(true);
+    characterNameText.text = dialogue.characterName;
+    dialogueText.text = dialogue.text;
+
+    // 显示立绘
+    CharacterDisplay charDisplay = FindObjectOfType<CharacterDisplay>();
+    if (charDisplay != null)
+        charDisplay.ShowCharacter(dialogue.characterId, dialogue.expression);
+
+    // 加载背景图
+    if (backgroundImage != null && !string.IsNullOrEmpty(dialogue.backgroundPath))
     {
-
-        
-        // 显示角色名和对话文本
-        dialoguePanel.SetActive(true);
-        characterNameText.text = dialogue.characterName;
-        dialogueText.text = dialogue.text;
-
-        // 清除旧的选项按钮
-        ClearChoiceButtons();
-
-        // 生成新的选项按钮
-        if (dialogue.choices != null && dialogue.choices.Count > 0)
-        {
-            choicePanel.SetActive(true);
-            foreach (var choice in dialogue.choices)
-            {
-                CreateChoiceButton(choice);
-            }
-        }
-        else
-        {
-            choicePanel.SetActive(false);
-        }
-        
-        // 加载背景图
-        if (backgroundImage != null && !string.IsNullOrEmpty(dialogue.backgroundPath))
-        {
-            Sprite bg = Resources.Load<Sprite>(dialogue.backgroundPath);
-            if (bg != null)
-                backgroundImage.sprite = bg;
-        }
+        Sprite bg = Resources.Load<Sprite>(dialogue.backgroundPath);
+        if (bg != null)
+            backgroundImage.sprite = bg;
     }
+
+    ClearChoiceButtons();
+
+    if (dialogue.choices != null && dialogue.choices.Count > 0)
+    {
+        choicePanel.SetActive(true);
+        foreach (var choice in dialogue.choices)
+            CreateChoiceButton(choice);
+    }
+    else
+    {
+        choicePanel.SetActive(false);
+    }
+}
+    
 
     // 动态生成选项按钮
     void CreateChoiceButton(Choice choice)

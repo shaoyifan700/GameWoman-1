@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections;
+using System.Text.RegularExpressions;
+
 
 public class UserSelectManager : MonoBehaviour
 {
@@ -90,22 +92,45 @@ public class UserSelectManager : MonoBehaviour
 {
     string newUser = inputField.text.Trim();
 
+      // 1. 不能为空
     if (string.IsNullOrEmpty(newUser))
     {
         tipText.text = "用户名不能为空！";
         return;
     }
 
-    if (newUser.Length > 10)
+    // 2. 不能包含空格
+   if (newUser.Contains(" "))
+{
+    tipText.text = "用户名不能包含空格！";
+    return;
+}
+
+    // 3. 长度限制 2-10 个字符
+    if (newUser.Length < 2 || newUser.Length > 10)
     {
-        tipText.text = "用户名不能超过10个字！";
+        tipText.text = "用户名长度必须在2到10个字符之间！";
         return;
     }
 
+    // 4. 只能是中文、英文、数字
+    if (!Regex.IsMatch(newUser, @"^[\u4e00-\u9fa5a-zA-Z0-9]+$"))
+    {
+        tipText.text = "用户名只能包含中文、英文或数字！";
+        return;
+    }
+
+    // 5. 不能纯数字
+    if (Regex.IsMatch(newUser, @"^\d+$"))
+    {
+        tipText.text = "用户名不能为纯数字！";
+        return;
+    }
+
+    // 校验通过，继续创建
     SaveManager.Instance.AddUserToList(newUser);
     SaveManager.Instance.SetCurrentUser(newUser);
 
-    // 新用户清除所有存档读取标记，从头开始
     PlayerPrefs.SetInt("LoadDialogueId", 0);
     PlayerPrefs.SetInt("SavedCharacter", 0);
     PlayerPrefs.SetInt("LoadFav1", 0);
