@@ -48,4 +48,8 @@ public void OnClickXiaXinghe()
 
         Application.Quit();
     }
+    public void OnClickChat()
+{
+    SceneManager.LoadScene("AIChatScene");
+}
 }

@@ -51,3 +51,55 @@ public class DialogueDataWrapper
 {
     public List<Dialogue> dialogues = new List<Dialogue>();
 }
+
+[Serializable]
+public class ChatOption
+{
+    public int optionId;
+    public string text;
+}
+
+[Serializable]
+public class ChatReply
+{
+    public string optionId;
+    public string replyText;
+}
+
+[Serializable]
+public class ChatRound
+{
+    public int roundId;
+    public List<ChatOption> playerOptions = new List<ChatOption>();
+    public List<ChatReply> replies = new List<ChatReply>();
+}
+
+[Serializable]
+public class CharacterChat
+{
+    public int characterId;
+    public string characterName;
+    public List<ChatRound> rounds = new List<ChatRound>();
+}
+
+[Serializable]
+public class ChatDataWrapper
+{
+    public List<CharacterChat> chats = new List<CharacterChat>();
+}
+
+[Serializable]
+public class ChatCharacter
+{
+    public int id;
+    public string name;
+    public string tag;
+    public string avatar;
+    public string systemPrompt;
+}
+
+[Serializable]
+public class ChatCharacterWrapper
+{
+    public List<ChatCharacter> characters = new List<ChatCharacter>();
+}

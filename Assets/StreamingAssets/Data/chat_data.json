@@ -1,0 +1,187 @@
+{
+  "chats": [
+    {
+      "characterId": 1,
+      "characterName": "林晨西",
+      "rounds": [
+        {
+          "roundId": 1,
+          "playerOptions": [
+            {"optionId": 1, "text": "学长，你今天有空吗？"},
+            {"optionId": 2, "text": "学长最近在忙什么呢？"}
+          ],
+          "replies": [
+            {"optionId": "1", "replyText": "嗯，今天事情不多。怎么了，有什么需要帮忙的吗？"},
+            {"optionId": "2", "replyText": "最近在帮学生会整理期末活动的资料，有点多。你今天怎么样？"}
+          ]
+        },
+        {
+          "roundId": 2,
+          "playerOptions": [
+            {"optionId": 1, "text": "没什么，就是想跟你聊聊。"},
+            {"optionId": 2, "text": "只是随便问问，学长辛苦了。"}
+          ],
+          "replies": [
+            {"optionId": "1", "replyText": "……（过了一会儿）那就聊吧。你最近睡眠怎么样，上次看你黑眼圈挺重的。"},
+            {"optionId": "2", "replyText": "不辛苦。你突然说这个，倒是让我有点不习惯。（停顿）谢谢你。"}
+          ]
+        },
+        {
+          "roundId": 3,
+          "playerOptions": [
+            {"optionId": 1, "text": "学长喜欢什么样的天气？"},
+            {"optionId": 2, "text": "学长平时放松的时候会做什么？"}
+          ],
+          "replies": [
+            {"optionId": "1", "replyText": "下雨天。安静，适合看书，也适合发呆。你呢？"},
+            {"optionId": "2", "replyText": "去操场走走，或者找个没人的地方拍拍照。你问这个干什么，想约我出去？"}
+          ]
+        },
+        {
+          "roundId": 4,
+          "playerOptions": [
+            {"optionId": 1, "text": "如果可以，想和学长一起看场雨。"},
+            {"optionId": 2, "text": "学长，我觉得你是个很特别的人。"}
+          ],
+          "replies": [
+            {"optionId": "1", "replyText": "……（很久没回复）好。下次下雨，告诉我。"},
+            {"optionId": "2", "replyText": "特别？怎么个特别法。（但语气明显软了一些）"}
+          ]
+        },
+        {
+          "roundId": 5,
+          "playerOptions": [
+            {"optionId": 1, "text": "就是……跟你在一起很安心。"},
+            {"optionId": 2, "text": "说不清楚，就是感觉很不一样。"}
+          ],
+          "replies": [
+            {"optionId": "1", "replyText": "……我也是。（停顿很久）你早点休息，晚安。"},
+            {"optionId": "2", "replyText": "嗯。（停顿）我也觉得，你和我遇到过的人都不一样。晚安。"}
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": 2,
+      "characterName": "顾云深",
+      "rounds": [
+        {
+          "roundId": 1,
+          "playerOptions": [
+            {"optionId": 1, "text": "顾总，打扰一下。"},
+            {"optionId": 2, "text": "顾云深，你在忙吗？"}
+          ],
+          "replies": [
+            {"optionId": "1", "replyText": "说。"},
+            {"optionId": "2", "replyText": "（沉默了一会儿）你叫我名字了。有事？"}
+          ]
+        },
+        {
+          "roundId": 2,
+          "playerOptions": [
+            {"optionId": 1, "text": "没什么事，就是想联系你。"},
+            {"optionId": 2, "text": "只是想问问你今天还好吗。"}
+          ],
+          "replies": [
+            {"optionId": "1", "replyText": "……（很久）你发这条消息之前，想了多久。"},
+            {"optionId": "2", "replyText": "还好。（停顿）你不像是会随便问这种问题的人。"}
+          ]
+        },
+        {
+          "roundId": 3,
+          "playerOptions": [
+            {"optionId": 1, "text": "你今天吃饭了吗？"},
+            {"optionId": 2, "text": "你有没有什么特别喜欢的东西？"}
+          ],
+          "replies": [
+            {"optionId": "1", "replyText": "吃了。你在关心我？（语气有些意外）"},
+            {"optionId": "2", "replyText": "（想了很久）咖啡。还有……某些让我觉得值得花时间的事。"}
+          ]
+        },
+        {
+          "roundId": 4,
+          "playerOptions": [
+            {"optionId": 1, "text": "我也喜欢喝咖啡，改天一起？"},
+            {"optionId": 2, "text": "什么样的事情值得你花时间？"}
+          ],
+          "replies": [
+            {"optionId": "1", "replyText": "……可以。（停顿）你定时间。"},
+            {"optionId": "2", "replyText": "现在吗？（停顿很久）和你说话，算一种。"}
+          ]
+        },
+        {
+          "roundId": 5,
+          "playerOptions": [
+            {"optionId": 1, "text": "顾云深，我很高兴认识你。"},
+            {"optionId": 2, "text": "谢谢你愿意和我说这些。"}
+          ],
+          "replies": [
+            {"optionId": "1", "replyText": "（很久没回复）……我也是。去休息吧，明天还有事。"},
+            {"optionId": "2", "replyText": "不客气。（停顿）你比我想象的更值得说。晚安。"}
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": 3,
+      "characterName": "夏星河",
+      "rounds": [
+        {
+          "roundId": 1,
+          "playerOptions": [
+            {"optionId": 1, "text": "夏星河！你在干嘛！"},
+            {"optionId": 2, "text": "星河，有空吗？"}
+          ],
+          "replies": [
+            {"optionId": "1", "replyText": "姐姐！！你主动找我！！我在宿舍躺着呢，怎么了怎么了？"},
+            {"optionId": "2", "replyText": "有空有空超级有空！姐姐你主动发消息给我，今天是什么日子！"}
+          ]
+        },
+        {
+          "roundId": 2,
+          "playerOptions": [
+            {"optionId": 1, "text": "没事，就是想跟你说说话。"},
+            {"optionId": 2, "text": "想问问你最近怎么样。"}
+          ],
+          "replies": [
+            {"optionId": "1", "replyText": "啊啊啊姐姐！！就是想跟我说话！！我要截图存起来！最近超好的，因为姐姐主动找我了！"},
+            {"optionId": "2", "replyText": "最近超好！因为姐姐还记得我！你最近怎么样，吃饭了没，睡得好不好？"}
+          ]
+        },
+        {
+          "roundId": 3,
+          "playerOptions": [
+            {"optionId": 1, "text": "你有没有什么开心的事讲给我听？"},
+            {"optionId": 2, "text": "最近有没有打篮球？"}
+          ],
+          "replies": [
+            {"optionId": "1", "replyText": "有！今天打篮球赢了，吃饭的时候多加了一份肉，然后……姐姐给我发消息了。这是今天最开心的事。"},
+            {"optionId": "2", "replyText": "打了打了！今天还进了个超帅的三分！可惜姐姐没来看……下次你来嘛？"}
+          ]
+        },
+        {
+          "roundId": 4,
+          "playerOptions": [
+            {"optionId": 1, "text": "下次我去给你加油好了。"},
+            {"optionId": 2, "text": "你好像每天都很开心？"}
+          ],
+          "replies": [
+            {"optionId": "1", "replyText": "真的吗！！姐姐说话算数！我下次打比赛一定发挥超好！你坐哪排，我给你指！"},
+            {"optionId": "2", "replyText": "也不是啦……（少见地安静了一下）有时候也会想，你有没有在想我。"}
+          ]
+        },
+        {
+          "roundId": 5,
+          "playerOptions": [
+            {"optionId": 1, "text": "我有在想你啊。"},
+            {"optionId": 2, "text": "你其实没有表现出来的那么没心没肺。"}
+          ],
+          "replies": [
+            {"optionId": "1", "replyText": "……（消失了好几分钟）姐姐你说的是真的吗。（声音好像小了很多）那我很开心。很开心很开心。晚安。"},
+            {"optionId": "2", "replyText": "被你发现了。（停顿）但只在姐姐面前。晚安，做梦梦到我。"}
+          ]
+        }
+      ]
+    }
+  ]
+}
