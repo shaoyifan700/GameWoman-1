@@ -103,3 +103,35 @@ public class ChatCharacterWrapper
 {
     public List<ChatCharacter> characters = new List<ChatCharacter>();
 }
+
+// 用于本地存储的聊天记录，比 DoubaoMessage 多一个 reaction 字段
+[Serializable]
+public class ChatMessageRecord
+{
+    public string role;
+    public string content;
+    public int reaction; // 0=无 1=赞 -1=踩
+}
+
+[Serializable]
+public class ChatHistoryWrapper
+{
+    public List<ChatMessageRecord> messages = new List<ChatMessageRecord>();
+}
+
+// 单个存档槽的数据
+[Serializable]
+public class SaveSlot
+{
+    public int slotIndex;          // 1-5
+    public string saveName;        // 存档名
+    public string timestamp;       // 存档时间，如 "2026/5/11 15:23"
+    public string sceneName;       // 所在场景名
+    public int currentDialogueId;
+    public int selectedCharacter;
+    public string characterName;   // 角色名
+    public int favorability1;
+    public int favorability2;
+    public int favorability3;
+    public bool isEmpty = true;    // 是否空槽
+}

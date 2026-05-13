@@ -9,8 +9,12 @@ public class PauseManager : MonoBehaviour
     public GameObject pausePanel;
     public TextMeshProUGUI userNameText;
     public Button btnSave;
+    public Button btnLoad;            // 新增：读档按钮（可选）
     public Button btnHome;
     public Button btnUserSelect;
+
+    [Header("存档槽位面板")]
+    public SaveSlotsPanel saveSlotsPanel;
 
     private bool isPaused = false;
     private bool hasSaved = false;
@@ -26,6 +30,7 @@ public class PauseManager : MonoBehaviour
             userNameText.text = "你好！" + SaveManager.Instance.GetCurrentUser();
 
         btnSave.onClick.AddListener(OnClickSave);
+        if (btnLoad != null) btnLoad.onClick.AddListener(OnClickLoad);
         btnHome.onClick.AddListener(OnClickHome);
         btnUserSelect.onClick.AddListener(OnClickUserSelect);
     }
@@ -49,26 +54,16 @@ public class PauseManager : MonoBehaviour
    
 
     void OnClickSave()
-{
-    if (SaveManager.Instance == null)
     {
-        Debug.LogError("SaveManager为空！");
-        return;
+        if (saveSlotsPanel != null)
+            saveSlotsPanel.Show(SaveSlotsPanel.Mode.Save);
     }
 
-    int currentDialogueId = 0;
-    DialogueManager dm = FindObjectOfType<DialogueManager>();
-    if (dm != null)
-        currentDialogueId = dm.GetCurrentDialogueId();
-
-    Debug.Log("准备存档，当前对话ID：" + currentDialogueId);
-    SaveManager.Instance.SaveGame(currentDialogueId);
-    hasSaved = true; // 标记已存档
-
-
-    userNameText.text = "存档成功！";
-    Invoke("ResetUserNameText", 2f);
-}
+    void OnClickLoad()
+    {
+        if (saveSlotsPanel != null)
+            saveSlotsPanel.Show(SaveSlotsPanel.Mode.Load);
+    }
 
     void ResetUserNameText()
 {

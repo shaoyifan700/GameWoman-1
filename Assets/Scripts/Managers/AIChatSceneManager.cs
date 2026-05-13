@@ -20,8 +20,15 @@ public class AIChatSceneManager : MonoBehaviour
     void Start()
     {
         Debug.Log("AIChatSceneManager 执行了！");
+        RefreshStamina();
         StartCoroutine(LoadAfterLayout());
+        
     }
+    void RefreshStamina()
+{
+    if (staminaText != null && StaminaManager.Instance != null)
+        staminaText.text = "体力：" + StaminaManager.Instance.GetStamina();
+}
 
     IEnumerator LoadAfterLayout()
     {
@@ -66,6 +73,22 @@ public class AIChatSceneManager : MonoBehaviour
             if (nameTMP != null) nameTMP.text = character.name;
             if (tagTMP != null) tagTMP.text = character.tag;
 
+            // 加载头像
+            Image avatarImage = card.transform.Find("Image")?.GetComponent<Image>();
+            if (avatarImage != null && !string.IsNullOrEmpty(character.avatar))
+            {
+                Sprite sprite = Resources.Load<Sprite>(character.avatar);
+                if (sprite != null)
+                {
+                    avatarImage.sprite = sprite;
+                    avatarImage.color = Color.white;  // 重置颜色，避免绿色染色
+                }
+                else
+                {
+                    Debug.LogWarning("找不到头像: " + character.avatar);
+                }
+            }
+
             Button btn = card.GetComponent<Button>();
             int capturedId = character.id;
             if (btn != null)
@@ -80,5 +103,10 @@ public class AIChatSceneManager : MonoBehaviour
     public void OnClickRecharge()
     {
         SceneManager.LoadScene("ShopScene");
+    }
+
+    public void OnClickBack()
+    {
+        SceneManager.LoadScene("HomePage");
     }
 }

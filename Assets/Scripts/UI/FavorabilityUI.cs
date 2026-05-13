@@ -18,7 +18,7 @@ public class FavorabilityUI : MonoBehaviour
         if (GameManager.Instance == null) return;
 
         int favorability = GameManager.Instance.GetFavorability(characterId);
-        int filledHearts = favorability / 20; // 每20点亮一颗心
+        int filledHearts = favorability / 34; // 每34点亮一颗心（最高约170对应5颗心）
         filledHearts = Mathf.Clamp(filledHearts, 0, 5);
 
         for (int i = 0; i < hearts.Length; i++)

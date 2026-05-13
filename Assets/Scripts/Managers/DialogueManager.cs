@@ -160,16 +160,34 @@ IEnumerator StartAfterGameManager()
         if (favUI != null)
             favUI.UpdateHearts();
 
-        if (choice.nextDialogueId == -1)
-            EndDialogue();
-        else
-            StartDialogue(choice.nextDialogueId);
+        // 结局分流：根据好感度决定走完美结局还是悲伤结局
+        int nextId = RouteEnding(choice.nextDialogueId);
 
-        
-        if (choice.nextDialogueId == -1)
+        if (nextId == -1)
             EndDialogue();
         else
-            StartDialogue(choice.nextDialogueId);
+            StartDialogue(nextId);
+    }
+
+    // 当 nextId 是已知的结局节点时，根据当前角色好感度决定走 GE 还是 BE
+    // GE阈值=80：好感度≥80 走完美结局，否则走悲伤结局
+    const int ENDING_THRESHOLD = 120;
+
+    int RouteEnding(int nextId)
+    {
+        // 林晨西：完美1051 / 悲伤1052
+        if (nextId == 1051)
+            return GameManager.Instance.GetFavorability(1) >= ENDING_THRESHOLD ? 1051 : 1052;
+
+        // 顾云深：完美2056 / 悲伤2057
+        if (nextId == 2056)
+            return GameManager.Instance.GetFavorability(2) >= ENDING_THRESHOLD ? 2056 : 2057;
+
+        // 夏星河：完美3053 / 悲伤3054
+        if (nextId == 3053)
+            return GameManager.Instance.GetFavorability(3) >= ENDING_THRESHOLD ? 3053 : 3054;
+
+        return nextId;
     }
    
     // 让 PauseManager 能读取当前对话 ID

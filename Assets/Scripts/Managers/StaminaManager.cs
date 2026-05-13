@@ -4,7 +4,7 @@ public class StaminaManager : MonoBehaviour
 {
     public static StaminaManager Instance;
 
-    private int maxStamina = 10;
+    private int maxStamina = 9;
     private int currentStamina;
     private const string STAMINA_KEY = "Stamina_";
 

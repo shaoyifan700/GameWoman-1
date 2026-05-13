@@ -2,6 +2,9 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
 
+
+
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;//单例manager
@@ -9,6 +12,7 @@ public class GameManager : MonoBehaviour
     private CharacterDataWrapper characterData;// 存储3个角色的信息
     private DialogueDataWrapper dialogueData;// 存储所有对话
     private Dictionary<int, int> currentFavorability;//键值对存储好感度
+    
 
     void Awake()//确保单例的manager
     {

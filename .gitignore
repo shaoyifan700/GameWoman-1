@@ -26,7 +26,7 @@ MemoryCaptures/
 *.tmp
 *.user
 *.userprefs
-*.pidb
+*.pidbgit push -u origin main
 *.booproj
 *.svd
 *.pdb

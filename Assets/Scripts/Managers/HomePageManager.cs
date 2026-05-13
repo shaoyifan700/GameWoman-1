@@ -9,6 +9,7 @@ public class HomePageManager : MonoBehaviour
 
     void Start()
     {
+        
         // 读取上次保存的音量，默认0.5
         float savedVolume = PlayerPrefs.GetFloat("BGMVolume", 0.5f);
         volumeSlider.value = savedVolume;
@@ -52,4 +53,9 @@ public void OnClickXiaXinghe()
 {
     SceneManager.LoadScene("AIChatScene");
 }
+
+    public void onClickBack()
+    {
+        SceneManager.LoadScene("UserSelect");
+    }
 }
