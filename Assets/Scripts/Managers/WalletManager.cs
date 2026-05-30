@@ -5,7 +5,7 @@ public class WalletManager : MonoBehaviour
     public static WalletManager Instance;
 
     private const string WALLET_KEY = "Wallet_";
-    private const float INITIAL_BALANCE = 1000f;
+    private const float INITIAL_BALANCE = 20f;
     private float currentBalance;
 
     void Awake()
@@ -40,6 +40,12 @@ public class WalletManager : MonoBehaviour
         currentBalance -= amount;
         SaveWallet();
         return true;
+    }
+
+    public void AddMoney(float amount)
+    {
+        currentBalance += amount;
+        SaveWallet();
     }
 
     void SaveWallet()

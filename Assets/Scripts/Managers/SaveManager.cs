@@ -235,6 +235,10 @@ public class SaveManager : MonoBehaviour
         for (int i = 1; i <= MAX_SLOTS; i++)
             PlayerPrefs.DeleteKey("SaveSlot_" + userName + "_" + i);
 
+        // 清除成就进度
+        PlayerPrefs.DeleteKey("AchievementProgress_" + userName);
+        PlayerPrefs.DeleteKey("AchievementEndings_" + userName);
+
         string users = PlayerPrefs.GetString("UserList", "");
         var userList = new System.Collections.Generic.List<string>(users.Split(','));
         userList.Remove(userName);

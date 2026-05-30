@@ -1,0 +1,118 @@
+{
+  "achievements": [
+    {
+      "id": "lin_1hearts",
+      "name": "林之真爱粉",
+      "description": "与林晨西互动获得1颗心的好感度",
+      "category": "好感度",
+      "isHidden": false
+    },
+    {
+      "id": "lin_he",
+      "name": "与小林完美的告别",
+      "description": "完成林晨西完美结局",
+      "category": "结局",
+      "isHidden": false
+    },
+    {
+       "id": "lin_be",
+      "name": "与小林悲惨的告别",
+      "description": "完成林晨西悲惨结局",
+      "category": "结局",
+      "isHidden": false
+    },
+    
+    {
+      "id": "duo_mian",
+      "name": "多面人身",
+      "description": "与三位角色都完成至少一条结局",
+      "category": "结局",
+      "isHidden": false
+    },
+    {
+      "id": "lin_2hearts",
+      "name": "林之死忠粉",
+      "description": "与林晨西互动获得2颗心的好感度",
+      "category": "好感度",
+      "isHidden": false
+    },
+    {
+      "id": "lin_3hearts",
+      "name": "林之铁粉",
+      "description": "与林晨西互动获得3颗心的好感度",
+      "category": "好感度",
+      "isHidden": false
+    },
+    {
+      "id": "gu_he",
+      "name": "与顾总完美的告别",
+      "description": "完成顾云深完美结局",
+      "category": "结局",
+      "isHidden": false
+    },
+    {
+       "id": "gu_be",
+      "name": "与顾总悲惨的告别",
+      "description": "完成顾云深悲惨结局",
+      "category": "结局",
+      "isHidden": false
+    },
+    {
+      "id": "gu_1hearts",
+      "name": "顾之真爱粉",
+      "description": "与顾云深互动获得1颗心的好感度",
+      "category": "好感度",
+      "isHidden": false
+    },
+    {
+      "id": "gu_2hearts",
+      "name": "顾之死忠粉",
+      "description": "与顾云深互动获得2颗心的好感度",
+      "category": "好感度",
+      "isHidden": false
+    },
+    {
+      "id": "gu_3hearts",
+      "name": "顾之铁粉",
+      "description": "与顾云深互动获得3颗心的好感度",
+      "category": "好感度",
+      "isHidden": false 
+    },
+    {
+      "id": "xia_he",
+      "name": "与夏星河完美的告别",
+      "description": "完成夏星河完美结局",
+      "category": "结局",
+      "isHidden": false
+      },
+      {
+        "id": "xia_be",
+        "name": "与夏星河悲惨的告别",
+        "description": "完成夏星河悲惨结局",
+        "category": "结局",
+        "isHidden": false         
+      },
+
+    {
+      "id": "xia_1hearts",
+      "name": "夏之真爱粉",
+      "description": "与夏星河互动获得1颗心的好感度",
+      "category": "好感度",
+      "isHidden": false
+    },
+    {
+      "id": "xia_2hearts",
+      "name": "夏之死忠粉",
+      "description": "与夏星河互动获得2颗心的好感度",
+      "category": "好感度",
+      "isHidden": false
+    },
+    {
+      "id": "xia_3hearts",
+      "name": "夏之铁粉",
+      "description": "与夏星河互动获得3颗心的好感度",
+      "category": "好感度",
+      "isHidden": false
+    }]}
+      
+

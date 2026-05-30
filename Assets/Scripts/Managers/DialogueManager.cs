@@ -44,17 +44,40 @@ IEnumerator StartAfterGameManager()
 
     int selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", 1);
 
-    // 直接从存档文件读取，不依赖 PlayerPrefs 的 LoadDialogueId
+    // 优先级1：检查是否刚从槽位读档（SaveSlotsPanel.DoLoad写入的临时键）
+    int loadDialogueId = PlayerPrefs.GetInt("LoadDialogueId", 0);
+
+    if (loadDialogueId > 0)
+    {
+        // 从槽位读档，直接设置（而非累加）对应的好感度
+        int fav1 = PlayerPrefs.GetInt("LoadFav1", 0);
+        int fav2 = PlayerPrefs.GetInt("LoadFav2", 0);
+        int fav3 = PlayerPrefs.GetInt("LoadFav3", 0);
+        GameManager.Instance.SetFavorability(1, fav1);
+        GameManager.Instance.SetFavorability(2, fav2);
+        GameManager.Instance.SetFavorability(3, fav3);
+
+        // 清除临时键，避免下次进入剧情时被误用
+        PlayerPrefs.DeleteKey("LoadDialogueId");
+        PlayerPrefs.DeleteKey("LoadFav1");
+        PlayerPrefs.DeleteKey("LoadFav2");
+        PlayerPrefs.DeleteKey("LoadFav3");
+        PlayerPrefs.Save();
+
+        StartDialogue(loadDialogueId);
+        yield break;
+    }
+
+    // 优先级2：从旧的单存档文件读取（兼容旧版本）
     SaveData data = null;
     if (SaveManager.Instance != null && !string.IsNullOrEmpty(SaveManager.Instance.GetCurrentUser()))
         data = SaveManager.Instance.LoadGame(SaveManager.Instance.GetCurrentUser());
 
     if (data != null && data.currentDialogueId > 0 && data.selectedCharacter == selectedCharacter)
     {
-        // 有存档且角色匹配，从存档位置继续
-        GameManager.Instance.UpdateFavorability(1, data.favorability1);
-        GameManager.Instance.UpdateFavorability(2, data.favorability2);
-        GameManager.Instance.UpdateFavorability(3, data.favorability3);
+        GameManager.Instance.SetFavorability(1, data.favorability1);
+        GameManager.Instance.SetFavorability(2, data.favorability2);
+        GameManager.Instance.SetFavorability(3, data.favorability3);
         StartDialogue(data.currentDialogueId);
     }
     else
@@ -152,6 +175,13 @@ IEnumerator StartAfterGameManager()
             foreach (var change in choice.favorabilityChanges)
             {
                 GameManager.Instance.UpdateFavorability(change.characterId, change.change);
+
+                // 成就触发：好感度变化后检查
+                if (AchievementManager.Instance != null)
+                {
+                    int newVal = GameManager.Instance.GetFavorability(change.characterId);
+                    AchievementManager.Instance.OnFavorabilityChanged(change.characterId, newVal);
+                }
             }
         }
 
@@ -162,6 +192,10 @@ IEnumerator StartAfterGameManager()
 
         // 结局分流：根据好感度决定走完美结局还是悲伤结局
         int nextId = RouteEnding(choice.nextDialogueId);
+
+        // 成就触发：进入结局节点
+        if (AchievementManager.Instance != null)
+            AchievementManager.Instance.OnEndingReached(nextId);
 
         if (nextId == -1)
             EndDialogue();

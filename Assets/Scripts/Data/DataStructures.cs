@@ -119,6 +119,38 @@ public class ChatHistoryWrapper
     public List<ChatMessageRecord> messages = new List<ChatMessageRecord>();
 }
 
+// 成就定义（从 achievements.json 加载）
+[Serializable]
+public class AchievementDef
+{
+    public string id;
+    public string name;
+    public string description;
+    public string category;
+    public bool isHidden;
+}
+
+[Serializable]
+public class AchievementDefWrapper
+{
+    public List<AchievementDef> achievements = new List<AchievementDef>();
+}
+
+// 玩家成就进度（持久化）
+[Serializable]
+public class AchievementProgress
+{
+    public string id;
+    public bool unlocked;
+    public string unlockedTime;
+}
+
+[Serializable]
+public class AchievementProgressWrapper
+{
+    public List<AchievementProgress> items = new List<AchievementProgress>();
+}
+
 // 单个存档槽的数据
 [Serializable]
 public class SaveSlot

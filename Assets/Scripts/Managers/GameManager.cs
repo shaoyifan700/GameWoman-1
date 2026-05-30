@@ -88,9 +88,24 @@ public class GameManager : MonoBehaviour
         if (currentFavorability.ContainsKey(characterId))
         {
             currentFavorability[characterId] += change;
-            Debug.Log("角色" + characterId + "好感度变化: " + (change > 0 ? "+" : "") + change + 
+            Debug.Log("角色" + characterId + "好感度变化: " + (change > 0 ? "+" : "") + change +
                      " (当前: " + currentFavorability[characterId] + ")");
         }
+    }
+
+    // 直接设置好感度（用于读档恢复，避免累加导致数值翻倍）
+    public void SetFavorability(int characterId, int value)
+    {
+        if (currentFavorability == null) currentFavorability = new Dictionary<int, int>();
+        currentFavorability[characterId] = value;
+    }
+
+    // 重置所有好感度（用于读档前清零）
+    public void ResetAllFavorability()
+    {
+        if (currentFavorability == null) return;
+        var keys = new List<int>(currentFavorability.Keys);
+        foreach (var k in keys) currentFavorability[k] = 0;
     }
 
     public int GetFavorability(int characterId)

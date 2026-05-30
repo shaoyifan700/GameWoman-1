@@ -22,7 +22,8 @@ public class UserSelectManager : MonoBehaviour
     public TextMeshProUGUI confirmText;
     public Button btnConfirm;
     public Button btnCancel;
-
+    public GameObject UsersPanel; // 包裹用户列表的面板（用于控制显示/隐藏）
+public Button btnCloseUsersPanel; // 关闭用户列表的按钮
     [Header("登录密码弹窗")]
     public GameObject loginPanel;                // 登录密码弹窗
     public TextMeshProUGUI loginPromptText;      // "请输入xxx的密码"
@@ -72,6 +73,15 @@ public class UserSelectManager : MonoBehaviour
             field.contentType = TMP_InputField.ContentType.Password;
         field.ForceLabelUpdate();
     }
+    public void ShowUsersPanel()
+    {
+        UsersPanel.gameObject.SetActive(true);
+    }
+    public void HideUsersPanel()
+    {
+        UsersPanel.gameObject.SetActive(false);
+    }
+    
 
     // 刷新用户列表
    void RefreshUserList()
@@ -150,6 +160,7 @@ public class UserSelectManager : MonoBehaviour
     SaveManager.Instance.SetCurrentUser(userName);
     if (StaminaManager.Instance != null) StaminaManager.Instance.InitStamina(userName);
     if (WalletManager.Instance != null) WalletManager.Instance.InitWallet(userName);
+    if (AchievementManager.Instance != null) AchievementManager.Instance.LoadProgressForCurrentUser();
 
     SaveData data = SaveManager.Instance.LoadGame(userName);
     if (data != null)
@@ -256,6 +267,7 @@ public class UserSelectManager : MonoBehaviour
     SaveManager.Instance.SetCurrentUser(newUser);
     if (StaminaManager.Instance != null) StaminaManager.Instance.InitStamina(newUser);
     if (WalletManager.Instance != null) WalletManager.Instance.InitWallet(newUser);
+    if (AchievementManager.Instance != null) AchievementManager.Instance.LoadProgressForCurrentUser();
 
     PlayerPrefs.SetInt("LoadDialogueId", 0);
     PlayerPrefs.SetInt("SavedCharacter", 0);
