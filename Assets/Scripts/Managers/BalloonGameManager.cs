@@ -114,9 +114,7 @@ public class BalloonGameManager : MonoBehaviour
 
         // 加钱到钱包
         if (WalletManager.Instance != null)
-        {
-            WalletManager.Instance.AddMoney(score);  // 假设有 AddMoney 方法
-        }
+            WalletManager.Instance.AddMoney(score);
 
         // 显示结算面板
         if (endPanel != null) endPanel.SetActive(true);

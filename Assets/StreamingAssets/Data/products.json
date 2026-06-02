@@ -1,0 +1,92 @@
+{
+  "products": [
+    {
+      "id": "ticket_1",
+      "name": "射击次数 ×1",
+      "description": "打气球游戏可玩 1 次",
+      "price": 5,
+      "category": "ticket",
+      "value": 1
+    },
+    {
+      "id": "ticket_2",
+      "name": "射击次数 ×2",
+      "description": "打气球游戏可玩 2 次",
+      "price": 10,
+      "category": "ticket",
+      "value": 2
+    },
+    {
+      "id": "ticket_3",
+      "name": "射击次数 ×3",
+      "description": "打气球游戏可玩 3 次",
+      "price": 15,
+      "category": "ticket",
+      "value": 3
+    },
+    {
+      "id": "ticket_5",
+      "name": "射击次数 ×5",
+      "description": "打气球游戏可玩 5 次（优惠装）",
+      "price": 20,
+      "category": "ticket",
+      "value": 5
+    },
+    {
+      "id": "stamina_1",
+      "name": "体力 +1",
+      "description": "增加 1 点体力",
+      "price": 1,
+      "category": "stamina",
+      "value": 1
+    },
+    {
+      "id": "stamina_2",
+      "name": "体力 +2",
+      "description": "增加 2 点体力",
+      "price": 2,
+      "category": "stamina",
+      "value": 2
+    },
+    {
+      "id": "stamina_3",
+      "name": "体力 +3",
+      "description": "增加 3 点体力",
+      "price": 3,
+      "category": "stamina",
+      "value": 3
+    },
+    {
+      "id": "stamina_5",
+      "name": "体力 +5",
+      "description": "增加 5 点体力",
+      "price": 4,
+      "category": "stamina",
+      "value": 5
+    },
+    {
+      "id": "stamina_10",
+      "name": "体力 +10",
+      "description": "增加 10 点体力",
+      "price": 6,
+      "category": "stamina",
+      "value": 10
+    },
+    {
+      "id": "stamina_30",
+      "name": "体力 +30",
+      "description": "增加 30 点体力",
+      "price": 15,
+      "category": "stamina",
+      "value": 30
+    },
+    {
+      "id": "stamina_60",
+      "name": "体力 +60",
+      "description": "增加 60 点体力",
+      "price": 25,
+      "category": "stamina",
+      "value": 60
+    }
+  ]
+}

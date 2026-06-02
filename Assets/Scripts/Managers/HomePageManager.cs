@@ -15,6 +15,11 @@ public class HomePageManager : MonoBehaviour
     [Header("钱包")]
     public TextMeshProUGUI walletText;                   // 钱包余额显示
 
+    [Header("射击次数")]
+    public TextMeshProUGUI ticketsText;                  // 剩余打气球次数显示
+    public GameObject noTicketsPanel;                    // 次数不足提示面板
+    public Button btnCloseNoTickets;                     // 关闭提示按钮
+
     void Start()
     {
 
@@ -30,6 +35,10 @@ public class HomePageManager : MonoBehaviour
         if (btnAchievements != null && achievementListPanel != null)
             btnAchievements.onClick.AddListener(() => achievementListPanel.Show());
 
+        // 次数不足提示面板默认隐藏
+        if (noTicketsPanel != null) noTicketsPanel.SetActive(false);
+        if (btnCloseNoTickets != null) btnCloseNoTickets.onClick.AddListener(OnClickCloseNoTickets);
+
         // 刷新钱包显示
         RefreshWallet();
     }
@@ -38,12 +47,46 @@ public class HomePageManager : MonoBehaviour
     {
         if (walletText != null && WalletManager.Instance != null)
             walletText.text = "" + WalletManager.Instance.GetBalance().ToString("0");
+
+        if (ticketsText != null && BalloonTicketsManager.Instance != null)
+            ticketsText.text = "剩余次数：" + BalloonTicketsManager.Instance.GetTickets();
     }
 
-    // 跳转到打气球小游戏
+    // 跳转到打气球小游戏（先检查次数）
     public void OnClickPlayBall()
     {
+        if (BalloonTicketsManager.Instance == null)
+        {
+            SceneManager.LoadScene("gameMoney");
+            return;
+        }
+
+        int tickets = BalloonTicketsManager.Instance.GetTickets();
+        if (tickets <= 0)
+        {
+            // 次数为0，弹提示
+            if (noTicketsPanel != null)
+            {
+                noTicketsPanel.SetActive(true);
+                noTicketsPanel.transform.SetAsLastSibling();
+            }
+            return;
+        }
+
+        // 扣一次再进游戏
+        BalloonTicketsManager.Instance.UseTicket();
         SceneManager.LoadScene("gameMoney");
+    }
+
+    public void OnClickCloseNoTickets()
+    {
+        if (noTicketsPanel != null) noTicketsPanel.SetActive(false);
+    }
+
+    // 跳转到商店
+    public void OnClickShop()
+    {
+        SceneManager.LoadScene("CartShop");
     }
 
     void OnVolumeChanged(float value)

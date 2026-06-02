@@ -136,6 +136,24 @@ public class AchievementDefWrapper
     public List<AchievementDef> achievements = new List<AchievementDef>();
 }
 
+// 商品定义
+[Serializable]
+public class Product
+{
+    public string id;
+    public string name;
+    public string description;
+    public int price;
+    public string category;   // "ticket" / "stamina"
+    public int value;          // 该商品的效果数值（射击次数1/5，体力10/30/60）
+}
+
+[Serializable]
+public class ProductWrapper
+{
+    public List<Product> products = new List<Product>();
+}
+
 // 玩家成就进度（持久化）
 [Serializable]
 public class AchievementProgress

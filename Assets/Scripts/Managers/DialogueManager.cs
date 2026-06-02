@@ -132,7 +132,18 @@ IEnumerator StartAfterGameManager()
 
     ClearChoiceButtons();
 
-    if (dialogue.choices != null && dialogue.choices.Count > 0)
+    // 如果是结局节点（只有一个选项且指向 -1），不显示"完成"按钮，自动结束
+    bool isEnding = dialogue.choices != null
+                    && dialogue.choices.Count == 1
+                    && dialogue.choices[0].nextDialogueId == -1;
+
+    if (isEnding)
+    {
+        choicePanel.SetActive(false);
+        // 显示结局文字 3 秒后自动结束
+        StartCoroutine(AutoEndAfter(3f));
+    }
+    else if (dialogue.choices != null && dialogue.choices.Count > 0)
     {
         choicePanel.SetActive(true);
         foreach (var choice in dialogue.choices)
@@ -142,6 +153,12 @@ IEnumerator StartAfterGameManager()
     {
         choicePanel.SetActive(false);
     }
+}
+
+System.Collections.IEnumerator AutoEndAfter(float delay)
+{
+    yield return new WaitForSeconds(delay);
+    EndDialogue();
 }
     
 
@@ -247,5 +264,14 @@ IEnumerator StartAfterGameManager()
         dialoguePanel.SetActive(false);
         choicePanel.SetActive(false);
         ClearChoiceButtons();
+
+        // 剧情结束后延迟2秒自动回到 HomePage
+        StartCoroutine(BackToHomePageAfterDelay(2f));
+    }
+
+    System.Collections.IEnumerator BackToHomePageAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("HomePage");
     }
 }

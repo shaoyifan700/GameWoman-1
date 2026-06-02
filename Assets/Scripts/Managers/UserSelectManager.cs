@@ -161,6 +161,7 @@ public Button btnCloseUsersPanel; // 关闭用户列表的按钮
     if (StaminaManager.Instance != null) StaminaManager.Instance.InitStamina(userName);
     if (WalletManager.Instance != null) WalletManager.Instance.InitWallet(userName);
     if (AchievementManager.Instance != null) AchievementManager.Instance.LoadProgressForCurrentUser();
+    if (BalloonTicketsManager.Instance != null) BalloonTicketsManager.Instance.InitTickets(userName);
 
     SaveData data = SaveManager.Instance.LoadGame(userName);
     if (data != null)
@@ -268,6 +269,7 @@ public Button btnCloseUsersPanel; // 关闭用户列表的按钮
     if (StaminaManager.Instance != null) StaminaManager.Instance.InitStamina(newUser);
     if (WalletManager.Instance != null) WalletManager.Instance.InitWallet(newUser);
     if (AchievementManager.Instance != null) AchievementManager.Instance.LoadProgressForCurrentUser();
+    if (BalloonTicketsManager.Instance != null) BalloonTicketsManager.Instance.InitTickets(newUser);
 
     PlayerPrefs.SetInt("LoadDialogueId", 0);
     PlayerPrefs.SetInt("SavedCharacter", 0);

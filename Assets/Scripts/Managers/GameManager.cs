@@ -16,9 +16,9 @@ public class GameManager : MonoBehaviour
 
     void Awake()//确保单例的manager
     {
-        if (Instance == null)
+        if (Instance == null)// 问：内存里现在有没有这个Manager？
         {
-            Instance = this;
+            Instance = this; // 没有 → 我来当唯一实例
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -39,8 +39,8 @@ public class GameManager : MonoBehaviour
         string characterPath = Application.streamingAssetsPath + "/Data/characters.json";
         if (File.Exists(characterPath))
         {
-            string json = File.ReadAllText(characterPath);
-            characterData = JsonUtility.FromJson<CharacterDataWrapper>(json);
+            string json = File.ReadAllText(characterPath);// 吧文件内容读成字符串
+            characterData = JsonUtility.FromJson<CharacterDataWrapper>(json);// 把字符串解析成CharacterDataWrapper对象
             Debug.Log("角色数据加载成功,共" + characterData.characters.Count + "个角色");
         }
         else
@@ -64,12 +64,13 @@ public class GameManager : MonoBehaviour
 
     void InitializeFavorability()//初始化好感度
     {
-        currentFavorability = new Dictionary<int, int>();
+        currentFavorability = new Dictionary<int, int>();// 创建一个空的字典，Key=角色id，Value=好感度数值
+
         if (characterData != null)
         {
             foreach (var character in characterData.characters)
             {
-                currentFavorability[character.id] = 0;
+                currentFavorability[character.id] = 0;// 每个角色的初始好感度设为 0
             }
         }
     }
@@ -78,7 +79,7 @@ public class GameManager : MonoBehaviour
     {
         if (dialogueData != null)
         {
-            return dialogueData.dialogues.Find(d => d.id == dialogueId);
+            return dialogueData.dialogues.Find(d => d.id == dialogueId);// 在对话列表里找第一个 id 匹配的对话并返回
         }
         return null;
     }
@@ -100,7 +101,7 @@ public class GameManager : MonoBehaviour
         currentFavorability[characterId] = value;
     }
 
-    // 重置所有好感度（用于读档前清零）
+    // 重置所有好感度（用于读档前清零）, 读档前清零，是为了防止当前游戏里的旧数据"混进"新读取的存档里。
     public void ResetAllFavorability()
     {
         if (currentFavorability == null) return;
@@ -108,7 +109,9 @@ public class GameManager : MonoBehaviour
         foreach (var k in keys) currentFavorability[k] = 0;
     }
 
-    public int GetFavorability(int characterId)
+    public int GetFavorability(int characterId)// 先检查字典里有没有这个角色id
+    // 有 → 返回对应的好感度数值
+    // 没有 → 返回 0，避免报错
     {
         return currentFavorability.ContainsKey(characterId) ? currentFavorability[characterId] : 0;
     }
